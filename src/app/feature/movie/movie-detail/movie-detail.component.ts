@@ -29,7 +29,7 @@ export class MovieDetailComponent implements OnInit {
     this.movieSvc.getById(this.movieId).subscribe(
       resp => {
         this.movie = resp as Movie;
-        console.log('Movie', this.movie);
+        console.log('Movie :', this.movie);
       },
       err => {
         console.log(err);
