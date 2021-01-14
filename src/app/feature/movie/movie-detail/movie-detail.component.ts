@@ -22,7 +22,7 @@ export class MovieDetailComponent implements OnInit {
     this.route.params.subscribe(
       parms => {
         this.movieId = parms['id']
-        console.log("MovieID = " + this.movieId);
+        console.log("movieId = " + this.movieId);
       }
     );
     //get movie by ID
