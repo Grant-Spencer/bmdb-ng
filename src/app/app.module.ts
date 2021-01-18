@@ -13,6 +13,12 @@ import { NoComponentDefinedComponent } from './core/no-component-defined/no-comp
 import { MenuComponent } from './core/menu/menu.component';
 import { MovieDetailComponent } from './feature/movie/movie-detail/movie-detail.component';
 import { MovieEditComponent } from './feature/movie/movie-edit/movie-edit.component';
+import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail.component';
+import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.component';
+import { CreditListComponent } from './feature/credit/credit-list/credit-list.component';
+import { CreditCreateComponent } from './feature/credit/credit-create/credit-create.component';
+import { ActorDetailComponent } from './feature/actor/actor-detail/actor-detail.component';
+import { ActorEditComponent } from './feature/actor/actor-edit/actor-edit.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { MovieEditComponent } from './feature/movie/movie-edit/movie-edit.compon
     NoComponentDefinedComponent,
     MenuComponent,
     MovieDetailComponent,
-    MovieEditComponent
+    MovieEditComponent,
+    CreditDetailComponent,
+    CreditEditComponent,
+    CreditListComponent,
+    CreditCreateComponent,
+    ActorDetailComponent,
+    ActorEditComponent
   ],
   imports: [
     BrowserModule,

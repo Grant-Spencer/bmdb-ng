@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Actor } from '../model/actor.class';
 
-import { Actor } from '../model/actor';
 
 const URL = 'http://localhost:8080/actors';
 @Injectable({
@@ -20,4 +20,18 @@ export class ActorService {
     create(actor: Actor): Observable<Actor> {
       return this.http.post(URL+ '/', actor) as Observable<Actor>;
   }
+  //update actor
+  update(actor: Actor): Observable<Actor> {
+    return this.http.put(URL + '/', actor) as Observable<Actor>;
+  }
+  //delete an actor
+  delete(id): Observable<Actor> {
+    return this.http.delete(URL + '/'+id) as Observable<Actor>;
+  }
+ // getByID
+ getById(id): Observable<Actor> {
+  return this.http.get(URL + '/' + id) as Observable<Actor>;
+}
+
+
 }

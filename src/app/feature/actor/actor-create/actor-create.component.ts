@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Actor } from 'src/app/model/actor';
+import { Actor } from 'src/app/model/actor.class';
 import { ActorService } from 'src/app/service/actor.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class ActorCreateComponent implements OnInit {
 
   }
  save() {
-    // save the movie to the database
+    // save the actor to the database
     this.actorSvc.create(this.actor).subscribe(
       resp => {
         this.actor = resp as Actor;

@@ -1,21 +1,28 @@
-<app-menu></app-menu>>
+<app-menu></app-menu>
 <section class=heading> 
     <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
+    <a routerLink='\actor-create'>
+        <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
+    </a>
 </section>
-<table class="table table-sm table-striped">
+<table *ngIf='actors' class="table table-sm table-striped">
     <thead>
        <tr>
-        <th>ID</th><th>firstName</th><th>lastName</th><th>Gender</th><th>birthDate</th>
+        <th>ID</th><th>First Name</th><th>Last Name</th><th>Gender</th><th>Birth Date</th><th>Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor= 'let actor of actors'>
         <td>{{actor.id}}</td>
         <td>{{actor.firstName}}</td>
-        <td>{{movie.lastName}}</td>
-        <td>{{movie.gender}}</td>
-        <td>{{movie.birthDate}}</td>
-        <td>Detail | Edit</td>
+        <td>{{actor.lastName}}</td>
+        <td>{{actor.gender}}</td>
+        <td>{{actor.birthDate}}</td>
+        <td><a routerLink='/actor-detail/{{actor.id}}'>
+            <img width='20' height='20' src='assets/details.png' title='Actor Details'>
+        </a> | <a routerLink='/actor-edit/{{actor.id}}'>
+          <img width='20' height='20' src='assets/pencil-icon.png' title='Actor Edit'>
+      </a></td>
         </tr>
     </tbody>
 </table>
