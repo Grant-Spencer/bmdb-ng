@@ -13,28 +13,27 @@ import { MovieCreateComponent } from './feature/movie/movie-create/movie-create.
 import { MovieDetailComponent } from './feature/movie/movie-detail/movie-detail.component';
 import { MovieEditComponent } from './feature/movie/movie-edit/movie-edit.component';
 import { MovieListComponent } from './feature/movie/movie-list/movie-list.component';
-import { UserDetailComponent } from './feature/user/user-detail/user-detail.component';
 import { UserListComponent } from './feature/user/user-list/user-list.component';
 import { UserLoginComponent } from './feature/user/user-login/user-login.component';
 
+
 const routes: Routes = [
-  { path: '', redirectTo: 'movie-list', pathMatch: 'full' },
-  { path: 'movie-list', component: MovieListComponent },
-  { path: 'movie-create', component: MovieCreateComponent },
-  { path: 'movie-detail/:id', component: MovieDetailComponent },
-  { path: 'movie-edit/:id', component: MovieEditComponent },
-  { path: 'actor-list', component: ActorListComponent },
-  { path: 'actor-create', component: ActorCreateComponent },
-  { path: 'actor-detail/:id', component: ActorDetailComponent },
-  { path: 'actor-edit/:id', component: ActorEditComponent },
-  { path: 'credit-list', component: CreditListComponent },
-  { path: 'credit-create', component: CreditCreateComponent },
-  { path: 'credit-detail/:id', component: CreditDetailComponent },
-  { path: 'credit-edit/:id', component: CreditEditComponent },
-  { path: 'user-login', component: UserLoginComponent },
-  { path: 'user-detail/:id', component: UserDetailComponent },
-  { path: 'user-list', component: UserListComponent },
-  { path: '**', component: NoComponentDefinedComponent }
+ { path: '', redirectTo: 'movie-list', pathMatch: 'full'},
+ { path: 'movie-list', component: MovieListComponent },
+ { path: 'movie-create', component: MovieCreateComponent },
+ { path: 'movie-detail/:id', component: MovieDetailComponent },
+ { path: 'movie-edit/:id', component: MovieEditComponent },
+ { path: 'actor-list', component: ActorListComponent },
+ { path: 'actor-create', component: ActorCreateComponent },
+ { path: 'actor-detail/:id', component: ActorDetailComponent },
+ { path: 'actor-edit/:id', component: ActorEditComponent },
+ { path: 'credit-list', component: CreditListComponent },
+ { path: 'credit-create', component: CreditCreateComponent },
+ { path: 'credit-detail/:id', component: CreditDetailComponent },
+ { path: 'credit-edit/:id', component: CreditEditComponent },
+ { path: 'user-list', component: UserListComponent },
+ { path: 'user-login', component: UserLoginComponent },
+ { path: '**', component: NoComponentDefinedComponent }
 ];
 
 @NgModule({
